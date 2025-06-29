@@ -1,0 +1,13 @@
+
+[Unit]
+Description=Send PING to Arduino SHEDD
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/send_ping_to_arduino.sh
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
